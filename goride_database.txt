@@ -1,0 +1,53 @@
+1.GORIDE REGISTRATION
+
+set schema path goride
+
+create table Driverdetail
+(
+driver_id numeric primary key ,
+driver_name varchar(30) not null,
+driver age integer check(age>=18),
+license_num varchar(30) not null,
+validity date not null
+);
+insert into driverdetail values()
+
+
+set schema path goride
+
+create table cardetail
+(
+category_id numeric primary key,
+category varchar(10) not null,
+model varchar(10),
+company varchar(10),
+color varchar(10),
+carnumber varchar primary key 
+);
+insert into cardetail values(1,'Auto',"micro","honda","city","white","TN 01 PA 4554");
+insert into cardetail values(2,"auto","honda","city","black","TN 10 PA 4186");
+insert into cardetail values(3,"xl","Royal enfield","RE","white","TN 11 PA 2316");
+
+
+
+
+2.GORIDE BOOKING
+
+set schema path booking
+
+create table vehicle
+(
+vehicle_id integer primary key not null,
+category varchar(30) not null,
+min_range integer not null,
+max_range integer not null,
+price_withac integer,
+price_withoutac varchar
+)
+insert into vehicle values(1,'Auto',0,15,10,'NA');
+insert into vehicle values(2,'Auto',15,30,8,'NA');
+insert into vehicle values(3,'Auto',30,1500,12,'NA');
+insert into vehicle values(4,'micro',0,15,12,'14');
+insert into vehicle values(5,'micro',15,1500,10,'12');
+insert into vehicle values(6,'xl',0,15,14,'15');
+insert into vehicle values(7,'xl',15,1500,14,'15');
